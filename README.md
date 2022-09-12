@@ -12,7 +12,7 @@
 
 ## Sobre este projeto
 
-Este projeto tem por principal objetivo o desenvolvimento de uma api de endereços que seráconsumida pelo front-emd commerce suite, disponivel em: https://github.com/matheusgit1/commerce-suit
+Este projeto tem por principal objetivo o desenvolvimento de uma api de pagamentos que seráconsumida pelo front-emd commerce suite, disponivel em: https://github.com/matheusgit1/commerce-suit
 
 
 ## Autores
@@ -29,6 +29,7 @@ nestjs,
 typescript,
 javascrip,
 aws,
+striper,
 Sql,
 banco de dados postgress
 
