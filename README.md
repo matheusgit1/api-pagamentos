@@ -86,7 +86,7 @@ de sub sistemas de sua preferência
 
 
 ```bash
-  git clone https://github.com/matheusgit1/commerce-suit.git
+  git clone https://github.com/matheusgit1/api-pagamentos.git
 ```
 
 Entre no diretório do projeto
