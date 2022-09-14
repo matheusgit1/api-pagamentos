@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "d8800a30-4860-4dbd-9ddb-b904809adccc",
+		"name": "pagamentos (jwt) (ok) (only in payment api)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17845763"
+	},
+	"item": [
+		{
+			"name": "create payment (ok)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"total\": 20000,\r\n    \"productId\": \"fcfddaf4-baff-41da-bad1-ab5e856da856\",\r\n    \"adressId\": \"453f861c-8d87-49e8-a07d-7a820d710f43\",\r\n    \"creditCard\": \"5400473428479038\",\r\n    \"mouth\": 3,\r\n    \"expYear\": 2028,\r\n    \"cvc\": 880\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API_PAGAMENTOS}}/payments/create/payment",
+					"host": [
+						"{{URL_API_PAGAMENTOS}}"
+					],
+					"path": [
+						"payments",
+						"create",
+						"payment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create payment (ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total\": 20000,\r\n    \"productId\": \"7239d0f2-2e79-45d0-8b1f-2859542429b4\",\r\n    \"adressId\": \"453f861c-8d87-49e8-a07d-7a820d710f43\",\r\n    \"creditCard\": \"5400473428479038\",\r\n    \"mouth\": 3,\r\n    \"expYear\": 2028,\r\n    \"cvc\": 880\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API_PAGAMENTOS}}/payments/create/payment",
+							"host": [
+								"{{URL_API_PAGAMENTOS}}"
+							],
+							"path": [
+								"payments",
+								"create",
+								"payment"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1737"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6c9-LVPvedyEy9peLavGZivY05bbTHQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 03:10:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer\": {\n        \"id\": \"cus_MP8LMhRqNi9Qid\",\n        \"object\": \"customer\",\n        \"address\": {\n            \"city\": \"linhares\",\n            \"country\": \"BR\",\n            \"line1\": \"avenida padre manoel da nobrega\",\n            \"line2\": \"próximo ao casagrande\",\n            \"postal_code\": \"29903118\",\n            \"state\": \"espirito santo - ES\"\n        },\n        \"balance\": 20000,\n        \"created\": 1662779407,\n        \"currency\": \"brl\",\n        \"default_source\": null,\n        \"delinquent\": false,\n        \"description\": null,\n        \"discount\": null,\n        \"email\": \"pereira.matheusalves@gmail.com\",\n        \"invoice_prefix\": \"31AD25DE\",\n        \"invoice_settings\": {\n            \"custom_fields\": null,\n            \"default_payment_method\": null,\n            \"footer\": null,\n            \"rendering_options\": null\n        },\n        \"livemode\": false,\n        \"metadata\": {},\n        \"name\": \"Matheus\",\n        \"next_invoice_sequence\": 1,\n        \"phone\": null,\n        \"preferred_locales\": [],\n        \"shipping\": {\n            \"address\": {\n                \"city\": \"linhares\",\n                \"country\": \"BR\",\n                \"line1\": \"avenida padre manoel da nobrega\",\n                \"line2\": \"próximo ao casagrande\",\n                \"postal_code\": \"29903118\",\n                \"state\": \"espirito santo - ES\"\n            },\n            \"name\": \"Matheus\",\n            \"phone\": \"27997822665\"\n        },\n        \"tax_exempt\": \"none\",\n        \"test_clock\": null\n    },\n    \"payment\": {\n        \"id\": \"pm_1LgK56EFSIGxbTU77vXqhIle\",\n        \"object\": \"payment_method\",\n        \"billing_details\": {\n            \"address\": {\n                \"city\": \"linhares\",\n                \"country\": \"BR\",\n                \"line1\": \"avenida padre manoel da nobrega\",\n                \"line2\": \"próximo ao casagrande\",\n                \"postal_code\": \"29903118\",\n                \"state\": \"espirito santo - ES\"\n            },\n            \"email\": \"pereira.matheusalves@gmail.com\",\n            \"name\": \"Matheus\",\n            \"phone\": \"27997822665\"\n        },\n        \"card\": {\n            \"brand\": \"mastercard\",\n            \"checks\": {\n                \"address_line1_check\": \"unchecked\",\n                \"address_postal_code_check\": \"unchecked\",\n                \"cvc_check\": \"unchecked\"\n            },\n            \"country\": \"IT\",\n            \"exp_month\": 3,\n            \"exp_year\": 2028,\n            \"fingerprint\": \"IlKxc27hjHhTB2Ol\",\n            \"funding\": \"prepaid\",\n            \"generated_from\": null,\n            \"last4\": \"9038\",\n            \"networks\": {\n                \"available\": [\n                    \"mastercard\"\n                ],\n                \"preferred\": null\n            },\n            \"three_d_secure_usage\": {\n                \"supported\": true\n            },\n            \"wallet\": null\n        },\n        \"created\": 1662779408,\n        \"customer\": null,\n        \"livemode\": false,\n        \"metadata\": {},\n        \"type\": \"card\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
