@@ -17,7 +17,7 @@ export default class TypeORMConfig {
       host: process.env.DB_HOST,
       port: +process.env.DB_PORT,
       synchronize: Boolean(process.env.DB_SYNCHRONIZE),
-      entities: [CreditCardEntity],
+      entities: [WishListEntity, ProductsExcludedEntity, PurchasesEntity, CreditCardEntity],
     };
   }
 }

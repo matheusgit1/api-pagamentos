@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { WishListEntity } from './entities/wish-list.entity';
 import { ProductsExcludedEntity } from './entities/product-excluded.entity';
 import { PurchasesEntity } from './entities/purchases.entity';
+import { CreditCardEntity } from './entities/credit-cards.entity';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
@@ -15,6 +16,7 @@ import { ConfigModule } from '@nestjs/config';
       WishListEntity,
       ProductsExcludedEntity,
       PurchasesEntity,
+      CreditCardEntity
     ]),
   ],
   providers: [ORMService],
